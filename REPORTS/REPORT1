@@ -1,0 +1,52 @@
+//HOW SUPER FUNCTION HANDLE MULTIPLE INHERITANCE
+       
+class First(object):
+    def __init__(self):
+        super(First, self).__init__()
+        print("first")
+
+class Second(object):
+    def __init__(self):
+        super(Second, self).__init__()
+        print("second")
+
+class Third(First, Second):
+    def __init__(self):
+        super(Third, self).__init__()
+        print("third")
+The super() call finds the next method in the MRO at each step, which is why First and Second have to have it too, otherwise execution stops at the end of Second.__init__().
+
+
+>>> Third()
+second
+first
+third
+
+
+
+------------------------------------------------------------------------------------------
+
+//Multiple Inheritance in Python:
+
+a class can be derived from more than one base classes in Python. This is called multiple inheritance.
+
+**Multiple Inheritance in Python
+
+Like C++, a class can be derived from more than one base classes in Python. This is called multiple inheritance.
+
+In multiple inheritance, the features of all the base classes are inherited into the derived class. The syntax for multiple inheritance is similar to single inheritance.
+Example
+
+class Base1:
+    pass
+
+class Base2:
+    pass
+
+class MultiDerived(Base1, Base2):
+    pass
+
+Here, MultiDerived is derived from classes Base1 and Base2.
+
+
+                                           

@@ -1,0 +1,36 @@
+
+//report number2:
+no in python 
+there  is no overloading in python 
+In Python, you don't do things that way. When people do that in languages like Java, they generally want a default value (if they don't, they generally want a method with a different name). So, in Python, you can have default values.
+
+class A(object):  # Remember the ``object`` bit when working in Python 2.x
+
+    def stackoverflow(self, i=None):
+        if i is None:
+            print 'first form'
+        else:
+            print 'second form'
+
+As you can see, you can use this to trigger separate behaviour rather than merely having a default value.
+
+>>> ob = A()
+>>> ob.stackoverflow()
+first form
+>>> ob.stackoverflow(2)
+second form
+
+//examples2
+
+
+I think the word you're looking for is "overloading". There is no method overloading in python. You can however use default arguments, as follows.
+
+def stackoverflow(self, i=None):
+    if i != None:     
+        print 'second method', i
+    else:
+        print 'first method'
+
+When you pass it an argument it will follow the logic of the first condition and execute the first print statement. When you pass it no arguments, it will go into the else condition and execute the second print statement.
+
+
